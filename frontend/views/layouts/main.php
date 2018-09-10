@@ -27,12 +27,13 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
+  <header class="navigation transparent">
     <?php
     NavBar::begin([
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'main-nav nav-highlight sticky',
         ],
     ]);
     $menuItems = [
@@ -59,8 +60,37 @@ AppAsset::register($this);
     ]);
     NavBar::end();
     ?>
+  </header>
 
-    <div class="container">
+    <!-- Header -->
+
+			<!-- <header class="navigation transparent">
+				<div class="main-nav nav-highlight header-right sticky">
+					<div class="navbar navbar-default" role="navigation">
+						<div class="container">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<a class="logo" href=""><img alt="image" src="images/logo-light.png" /></a>
+							</div>
+							<div class="navbar-container">
+								<div class="navbar-collapse nav-collapse collapse collapsing-nav">
+									<ul class="nav navbar-nav">
+										<li class="dropdown active">
+											<a href="#">Header</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>--> <!-- End of Header -->
+
+    <div class="">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>

@@ -2,9 +2,14 @@
 
 /* @var $this yii\web\View */
 
+use yii\helpers\Html;
+
 $this->title = 'My Yii Application';
 ?>
-<div class="site-index">
+
+<?= Html::img(Yii::getAlias('@web') . '/images/app-section-background.jpg', ['class' => 'img-responsive']) ?>
+
+<div class="container">
 
     <div class="jumbotron">
         <h1>Congratulations!</h1>
