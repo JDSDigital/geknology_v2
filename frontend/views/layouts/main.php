@@ -4,6 +4,7 @@
 /* @var $content string */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
@@ -11,6 +12,82 @@ use frontend\assets\AppAsset;
 use common\widgets\Alert;
 
 AppAsset::register($this);
+
+// Meta tags
+$this->registerMetaTag(['name' => 'author', 'content' => 'geknology.com']);
+$this->registerMetaTag(['name' => 'description', 'content' => 'Geknology Techno Services ✓ Soporte Técnico ; Desarrollo Web ; Diseño Digital ; Redes | ¡Llámanos ☎ (569) 6775 0215!']);
+$this->registerMetaTag(['name' => 'keywords', 'content' => 'desarrollo web, diseño web, reparacion notebook, tecnico notebook, tecnico pc']);
+$this->registerMetaTag(['rel' => 'canonical', 'href' => 'https://www.geknology.com']);
+
+$this->registerMetaTag([
+    'property' => 'og:url',
+    'content' => Url::to(['/site/index'], true)
+]);
+
+$this->registerMetaTag([
+    'property' => 'og:type',
+    'content' => 'website'
+]);
+
+$this->registerMetaTag([
+    'property' => 'og:title',
+    'content' => 'Geknology Techno Services'
+]);
+
+$this->registerMetaTag([
+    'property' => 'og:description',
+    'content' => 'Geknology Techno Services ✓ Soporte Técnico ; Desarrollo Web ; Diseño Digital ; Redes | ¡Llámanos ☎ (569) 6775 0215!'
+]);
+
+$this->registerMetaTag([
+    'property' => 'og:image',
+    'content' => Url::to(['/images/logo/logo.png'], true)
+]);
+
+$this->registerMetaTag([
+    'property' => 'og:image:alt',
+    'content' => 'Geknology Techno Services'
+]);
+
+$this->registerMetaTag([
+    'property' => 'twitter:card',
+    'content' => 'summary'
+]);
+
+$this->registerMetaTag([
+    'property' => 'twitter:description',
+    'content' => 'Geknology Techno Services ✓ Soporte Técnico ; Desarrollo Web ; Diseño Digital ; Redes | ¡Llámanos ☎ (569) 6775 0215!'
+]);
+
+$this->registerMetaTag([
+    'property' => 'twitter:title',
+    'content' => 'Geknology Techno Services'
+]);
+
+// Favicon
+$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'sizes' => '196x196', 'href' => Yii::getAlias('@web') . '/images/favicon/favicon-196x196.png']);
+$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'sizes' => '96x96', 'href' => Yii::getAlias('@web') . '/images/favicon/favicon-96x96.png']);
+$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'sizes' => '32x32', 'href' => Yii::getAlias('@web') . '/images/favicon/favicon-32x32.png']);
+$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'sizes' => '16x16', 'href' => Yii::getAlias('@web') . '/images/favicon/favicon-16x16.png']);
+$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'sizes' => '128x128', 'href' => Yii::getAlias('@web') . '/images/favicon/favicon-128.png']);
+
+$this->registerLinkTag(['rel' => 'apple-touch-icon-precomposed', 'sizes' => '57x57', 'href' => Yii::getAlias('@web') . '/images/favicon/apple-touch-icon-57x57.png']);
+$this->registerLinkTag(['rel' => 'apple-touch-icon-precomposed', 'sizes' => '114x114', 'href' => Yii::getAlias('@web') . '/images/favicon/apple-touch-icon-114x114.png']);
+$this->registerLinkTag(['rel' => 'apple-touch-icon-precomposed', 'sizes' => '72x72', 'href' => Yii::getAlias('@web') . '/images/favicon/apple-touch-icon-72x72.png']);
+$this->registerLinkTag(['rel' => 'apple-touch-icon-precomposed', 'sizes' => '144x144', 'href' => Yii::getAlias('@web') . '/images/favicon/apple-touch-icon-144x144.png']);
+$this->registerLinkTag(['rel' => 'apple-touch-icon-precomposed', 'sizes' => '60x60', 'href' => Yii::getAlias('@web') . '/images/favicon/apple-touch-icon-60x60.png']);
+$this->registerLinkTag(['rel' => 'apple-touch-icon-precomposed', 'sizes' => '120x120', 'href' => Yii::getAlias('@web') . '/images/favicon/apple-touch-icon-120x120.png']);
+$this->registerLinkTag(['rel' => 'apple-touch-icon-precomposed', 'sizes' => '76x76', 'href' => Yii::getAlias('@web') . '/images/favicon/apple-touch-icon-76x76.png']);
+$this->registerLinkTag(['rel' => 'apple-touch-icon-precomposed', 'sizes' => '152x152', 'href' => Yii::getAlias('@web') . '/images/favicon/apple-touch-icon-152x152.png']);
+
+$this->registerMetaTag(['name' => 'application-name', 'content' => 'Geknology Techno Services']);
+$this->registerMetaTag(['name' => 'msapplication-TileColor', 'content' => '#FFFFFF']);
+$this->registerMetaTag(['name' => 'msapplication-TileImage', 'content' => './images/favicon/mstile-144x144.png']);
+$this->registerMetaTag(['name' => 'msapplication-square70x70logo', 'content' => './images/favicon/mstile-70x70.png']);
+$this->registerMetaTag(['name' => 'msapplication-square150x150logo', 'content' => './images/favicon/mstile-150x150.png']);
+$this->registerMetaTag(['name' => 'msapplication-wide310x150logo', 'content' => './images/favicon/mstile-310x150.png']);
+$this->registerMetaTag(['name' => 'msapplication-square310x310logo', 'content' => './images/favicon/mstile-310x310.png']);
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -26,34 +103,25 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<div class="wrap">
+<div class="page-content">
   <header class="navigation transparent">
     <?php
     NavBar::begin([
-        'brandLabel' => Yii::$app->name,
+        'brandLabel' => Html::img(Yii::getAlias('@web') . '/images/logo/logo.png'),
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'main-nav nav-highlight sticky',
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
+        ['label' => 'Inicio', 'url' => ['/site/index']],
+        ['label' => 'Quienes Somos', 'url' => ['/site/about']],
+        ['label' => 'Soporte Técnico', 'url' => ['/site/contact']],
+        ['label' => 'Desarrollo Web', 'url' => ['/site/contact']],
+        ['label' => 'Portafolio', 'url' => ['/site/contact']],
+        ['label' => 'Contacto', 'url' => ['/site/contact']],
+        ['label' => 'Califícanos', 'url' => 'https://goo.gl/YWpQ3V'],
     ];
-    if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-    } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>';
-    }
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => $menuItems,
@@ -62,50 +130,9 @@ AppAsset::register($this);
     ?>
   </header>
 
-    <!-- Header -->
-
-			<!-- <header class="navigation transparent">
-				<div class="main-nav nav-highlight header-right sticky">
-					<div class="navbar navbar-default" role="navigation">
-						<div class="container">
-							<div class="navbar-header">
-								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-								<a class="logo" href=""><img alt="image" src="images/logo-light.png" /></a>
-							</div>
-							<div class="navbar-container">
-								<div class="navbar-collapse nav-collapse collapse collapsing-nav">
-									<ul class="nav navbar-nav">
-										<li class="dropdown active">
-											<a href="#">Header</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</header>--> <!-- End of Header -->
-
-    <div class="">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
-    </div>
+  <?= Alert::widget() ?>
+  <?= $content ?>
 </div>
-
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>
 
 <?php $this->endBody() ?>
 </body>

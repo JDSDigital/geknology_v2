@@ -4,6 +4,24 @@ Custom.css
 Use this file to add your own css
 ****************************************************/
 
+.theme-color {
+  color: #0067b6 !important;
+}
+.navbar {
+  border-radius: 0;
+}
+.navbar .navbar-header .navbar-brand {
+  padding: 5px;
+}
+.navbar .navbar-header .navbar-brand img {
+  max-height: 100px;
+}
+.navbar.shrink .navbar-header .navbar-brand img {
+  max-height: 50px;
+}
+#rev_slider_88_1 ul {
+  padding: 0 !important;
+}
 .footer > .container {
     margin-bottom: 0;
 }
